@@ -1,0 +1,26 @@
+.img {
+  width: 100%;
+  height: auto;
+}
+.container {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.button {
+  position: absolute;
+  top: 50%;
+  left: 37px;
+  padding: 10px 73px;
+  font-size: 1.2vw;
+  background-color: var(--btn-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+.button:hover {
+  transform: scale(1.1);
+}

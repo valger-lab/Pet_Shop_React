@@ -1,0 +1,99 @@
+.header {
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+}
+
+.logoImage {
+  width: 70%;
+  height: 70px;
+  transition: transform 0.5s ease;
+}
+
+.logoImage:hover {
+  transform: rotate(360deg);
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  transition: transform 0.5s ease;
+}
+
+.nav a:hover {
+  transform: scale(1.1);
+  color: var(--btn-color);
+}
+
+.navLink {
+  font-size: 20px;
+  font-weight: 400;
+  text-decoration: none;
+  line-height: 130%;
+  color: rgba(40, 40, 40, 1);
+}
+
+.cartLink {
+  position: relative;
+  width: 48px;
+  height: 48px;
+}
+.cartLink img {
+  transition: transform 0.3s ease;
+}
+
+.cartLink img:hover {
+  transform: scale(1.1);
+}
+
+.cartCount {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: var(--btn-color);
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 50%;
+}
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.wiggleAnimation {
+  animation: wiggle 0.5s ease-in-out;
+}
+
+@media (max-width: 490px) {
+  .nav {
+    display: none;
+  }
+}

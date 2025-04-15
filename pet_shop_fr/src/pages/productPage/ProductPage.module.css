@@ -1,0 +1,139 @@
+.productPage {
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+.productContainer {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.productInfo {
+  display: flex;
+  flex-direction: column;
+  padding: 0 30px 0 30px;
+  box-shadow: 0 7px 16px rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 10px;
+}
+.productTitle {
+  margin: 0;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.productImage {
+  max-width: 450px;
+  height: 400px;
+  margin-bottom: 20px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.productPage p {
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--font-color);
+}
+
+.price {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.originalPrice {
+  text-decoration: line-through;
+  color: #201e1e;
+  font-size: 28px;
+  padding-right: 10px;
+}
+
+.discountedPrice {
+  color: var(--btn-color);
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.originalPriceNoDiscount {
+  color: #201e1e;
+  font-size: 28px;
+  padding-right: 10px;
+}
+.quantityControl {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.discountBadge {
+  color: #fb0707;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 27px;
+  font-weight: bold;
+
+  margin: 20px;
+}
+
+.quantityButton {
+  padding: 10px 32px;
+  background-color: var(--btn-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: medium;
+  transition: background-color 0.2s;
+}
+
+.quantityButton:hover {
+  background-color: var(--btn-color-hover);
+}
+.quantity {
+  margin: 0 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.addToCartButton {
+  width: 180px;
+  padding: 10px 40px;
+  background-color: var(--btn-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: medium;
+  transition: background-color 0.2s;
+}
+
+.addToCartButton:hover {
+  background-color: var(--btn-color-hover);
+}
+@media (max-width: 990px) {
+  .productContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .productInfo {
+    padding: 20px;
+  }
+}
+@media (max-width: 490px) {
+  .productImage {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .productTitle {
+    font-size: 30px;
+  }
+}
+@media (max-width: 480px) {
+  .productTitle {
+    font-size: 12px;
+  }
+}

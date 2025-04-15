@@ -1,0 +1,161 @@
+.container {
+  max-width: 1360px;
+  margin: 0 auto;
+}
+.title {
+  font-size: 64px;
+  font-weight: bold;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.productCard {
+  border: none;
+  border-radius: 12px;
+  padding: 15px;
+  position: relative;
+  animation: slideIn 0.6s ease-out;
+  animation-fill-mode: both;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.productCard a {
+  text-decoration: none;
+}
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.productCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.discountBadge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: var(--btn-color);
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.productImage {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.productTitle {
+  min-height: 35px;
+  font-size: 15px;
+  font-weight: 400;
+  margin: 10px;
+  color: var(--font-color);
+  text-align: center;
+}
+
+.price {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.discountedPrice {
+  color: var(--btn-color);
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.originalPrice {
+  text-decoration: line-through;
+  color: #201e1e;
+  font-size: 28px;
+  padding-right: 10px;
+}
+
+.addToCartContainer {
+  display: flex;
+  justify-content: center;
+  height: 60px;
+  align-items: flex-end;
+}
+
+.addToCartButton {
+  width: 100%;
+  padding: 10px 32px;
+  background-color: var(--btn-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: medium;
+  transition: background-color 0.2s;
+}
+
+.added {
+  background-color: var(--btn-color-hover);
+}
+
+.addToCartButton:hover {
+  background-color: var(--btn-color-hover);
+}
+.sortFilter {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sortFilter label {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.sortFilter select {
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.sortFilter select:hover {
+  border-color: #3498db;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 30px;
+  }
+  .productsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .title {
+    font-size: 20px;
+  }
+  .productsGrid {
+    grid-template-columns: 1fr;
+  }
+}
