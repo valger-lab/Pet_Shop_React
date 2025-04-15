@@ -28,6 +28,7 @@ npm install
 
 # 3. Start the development server
 npm start
+
 Make sure the backend server is running and available at the correct API URL.
 
 Author:
